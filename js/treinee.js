@@ -335,17 +335,89 @@
 
 // ФУНКЦІЯ АНАЛОГ INCLUDES
 
-function includes(array, value) {
-    // Change code below this line
-  let isIncludes=false;
-    for(let element of array){
-  if(element===value){
-   isIncludes=true;
-    }
-  }
-    return isIncludes;
-    // Change code above this line
-  }
+// function includes(array, value) {
+//     // Change code below this line
+//   let isIncludes=false;
+//     for(let element of array){
+//   if(element===value){
+//    isIncludes=true;
+//     }
+//   }
+//     return isIncludes;
+//     // Change code above this line
+//   }
   
   
-  console.log(includes([1, 2, 3, 4, 5], 3))
+//   console.log(includes([1, 2, 3, 4, 5], 3))
+
+
+
+// ЗМІНА ВЛАСТИВОСТЕЙ В ОБ'ЄКТІ
+
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = 'Henry Sibola'
+// apartment.tags.push("trusted");
+
+// console.log(apartment.owner.name)
+
+
+// FOR...IN ДЛЯ ОБ'ЄКТУ
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+// for(key in apartment){
+// console.log(key)
+//    keys.push(key);
+  
+  
+// }
+// console.log(keys)
+// for(value in apartment){
+//   values.push(apartment[value])};
+//   console.log(values)
+
+
+
+// HASOWNPROPERTY() В МЕТОДІ
+
+const keys = [];
+const values = [];
+const advert = {
+  service: "apt",
+};
+const apartment = Object.create(advert);
+apartment.descr = "Spacious apartment in the city center";
+apartment.rating = 4;
+apartment.price = 2153;
+
+for (const key in apartment) {
+  // Change code below this line
+
+  keys.push(key);
+  values.push(apartment[key]);
+
+  // Change code above this line
+}
+
