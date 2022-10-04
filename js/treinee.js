@@ -402,22 +402,603 @@
 
 // HASOWNPROPERTY() В МЕТОДІ
 
-const keys = [];
-const values = [];
-const advert = {
-  service: "apt",
-};
-const apartment = Object.create(advert);
-apartment.descr = "Spacious apartment in the city center";
-apartment.rating = 4;
-apartment.price = 2153;
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
 
-for (const key in apartment) {
-  // Change code below this line
+// for (const key in apartment) {
+//   // Change code below this line
+// if(apartment.hasOwnProperty(key)){
+//   keys.push(key);
+//   values.push(apartment[key])};
 
-  keys.push(key);
-  values.push(apartment[key]);
+//   // Change code above this line
+// }
+// console.log(keys);
+// console.log(values);
 
-  // Change code above this line
-}
+// ПІДРАХУНОК ВЛАСТИВОСТЕЙ ОБ'ЄКТА
+
+
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+// const values = Object.values(object);
+// for(value of values){
+//     console.log(value)
+//     propCount+=1
+// }
+//   // Change code above this line
+//   return propCount;
+// }
+
+// console.log(countProps({ name: "Mango", age: 2 }))
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }))
+  
+//  const object = {name: "Mango", age: 2, date:15,};
+//  let propCount = 0;
+//  const keys=Object.keys(object);
+//  console.log(keys);
+// for(const key of keys){
+//   propCount+=1;
+// }
+
+//  console.log(propCount)
+
+
+
+// // ПЕРЕБІР МАСИВУ ОБ'ЄКТІВ
+
+// const hexColors = [];
+// const rgbColors = [];
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// console.table(colors)
+// for(const color of colors){
+//   console.log(color.hex)
+//   hexColors.push(color.hex)};
+ 
+
+ 
+
+// console.table(hexColors)
+
+// ПРИЙМАЄ ПРОДУКТ ПОВЕРТАЄ ЦІНУ
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+// for(const product of products){
+
+//   if(productName===product.name){
+//     return product.price };
+//   }
+//   return null;
+// }
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Radar")); 
+// console.log(getProductPrice("Grip")); 
+// console.log(getProductPrice("Scanner")); 
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+
+// ФУНКЦІЯ ПРИЙМАЄ ПАРАМЕТР "КЛЮЧ" А ПОВЕРТАЄ МАСИВ ВСІХ ЗНАЧЕНЬ ВЛАСТИВОСТІ
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   let array=[];
+// for(const product of products){
+
+//   const keys=Object.keys(product)
+//   for(let key of keys){
+
+//   if(propName===key){
+//      array.push(product[propName])
+//   }
+// }
+// }
+// return array;
+// }
+
+//   // Change code above this line
+
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("category"));
+
+
+// ФУНКЦІЯ ПРИЙМАЄ ОДИН ПАРАМЕТР І ПОВЕРТАЄ ВАРТІСТЬ ВЛАСТИВОСТІ  З ЗАДАНИМ І'ЯМ
+
+/**
+ * PARAM productName
+ * RETURN TOTAL
+/** */
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+// let total=0;
+// for(const product of products){
+
+// if(product.name===productName){
+//   total=product.price*product.quantity;
+// }
+
+// }
+
+// return total;
+// }
+
+
+ 
+
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Grip"));
+// console.log(calculateTotalPrice("Scanner"));
+
+// ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТУ 
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const {yesterday, today, tomorrow} = highTemperatures
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+/**
+ * 
+// //  * @param {*} forecast { today: { low: 10, high: 20 },
+// //   tomorrow: { low: 20, high: 30 }
+// // }}
+// //  * @returns
+// //середня температура  */
+
+// const forecast= { today: { low: 10, high: 20 },
+//        tomorrow: { low: 20, high: 30 }};
+
+// function calculateMeanTemperature(forecast) {
+//   const{today:{low:todayLow, high:todayHigh}, tomorrow:{low:tomorrowLow, high:tomorrowHigh}} = forecast;
+
+
+//   // Change code above this line
+  
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;)
+// 
+
+
+
+
+
+
+// const completed = false;
+// const category = "General";
+// const priority = "Normal";
+
+// function makeTask(data) {
+// return{completed, category, priority,...data}
+//   // Change code below this line
+
+//   // Change code above this line
+// }
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" })) 
+
+// // повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false })
+
+
+
+
+// ПОВЕРТАЄ СУММУ АРГУМЕНТІВ
+// function add(...args) {
+//   let total=0;
+//   for(const arg of args){
+//     console.log(arg)
+//     total+=arg;
+//   }
+//   return total  
+//   }
+
+  
+//   console.log(add(12, 4, 11, 48))
+
+
+// ПРИЙМАЄ ДОВІЛЬНУ КІЛЬКІСТЬ АРГУМЕНТІВ ПОВЕРТАЄ МАСИВ ОДНАКОВИХ ЧИСЕ
+
+
+
+// // Change code below this line
+// function findMatches(firstArgs, ...args) {
+//   const matches = []; // Don't change this line
+//   for(const arg of args){
+//     if(firstArgs.includes(arg))
+//     matches.push(arg)
+// }
+//   // Change code above this line
+//   return matches;
+// }
+
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41))
+
+
+
+// const Args = [10, 24, 41, 6, 9, 19]
+// const firstArgs = Args[0];
+// console.log(firstArgs)
+// console.log(...Args)
+
+// const str=["Mango","Kivi","Poly","Ajax"]
+// console.log(str)
+// const newStr = str[str.length -1];
+// console.log(newStr)
+
+
+
+
+
+// ВИДАЛЯЄ СТАРУ КНИГУ ДОДАЄ НОВУ
+
+
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const idx=this.books.indexOf(oldName);
+//     console.log(idx)
+//     console.log(this.books.splice(0,1,newName));
+//       return this.books;
+
+//     // Change code above this line
+//   },
+// };
+// console.log(bookShelf.updateBook("The last kingdom", "Dune")) 
+// // значення властивості books - це масив ["Dune", "Haze", "The guardian of dreams"])
+
+
+// // МЕТОД  ПОВЕРТАЄ ВСІ ВЛАСТИВОСТІ ОБ'ЄКТА 
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+  
+//   getPotions() {
+   
+//     return this.potions;
+    
+//   },
+// }
+
+
+// ОБ'ЄКТ ТА ЙОГО МЕТОДИ
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for(const potion of this.potions)
+//     if(potion.name===newPotion.name){
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     this.potions.push(newPotion);
+
+//   },
+//   removePotion(potionName) {
+//     for(i=0; i<this.potions.length; i+=1){
+//       if(this.potions[i].name===potionName){
+//         this.potion.splice(i,1)
+//         return;
+//       }
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+   
+
+
+//   },
+//   updatePotionName(oldName, newName) {
+//     for(const potion of this.potions){
+//       if(potion.name===oldName){
+//         potion.name=newName;
+//         return this.potions;
+//       }
+//     }
+ 
+//   },
+//   // Change code above this line
+// };
+
+
+
+// // console.log(atTheOldToad.getPotions())
+// // console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }))
+// // console.log(atTheOldToad.removePotion("Dragon breath"))
+
+
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"))
+
+// ДЕЯКІ МЕТОДИ МАСИВУ
+
+// const bookShelf = {
+//   books: ["The Last Kingdom"],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+//   removeBook(bookName) {
+//     const bookIndex = this.books.indexOf(bookName);
+//     this.books.splice(bookIndex, 1);
+//   },
+// };
+
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom"]
+// bookShelf.addBook("The Mist");
+// bookShelf.addBook("Dream Guardian");
+// console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'The Mist', 'Dream Guardian']
+// bookShelf.removeBook("The Mist");
+// console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'Dream Guardian']
+
+// ЦИКЛ FOR ...IN
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   // Якщо це власна властивість - виконуємо тіло if
+//   if (book.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(book[key]);
+//   }
+
+//   // Якщо це невласна властивість - нічого не робимо
+// }
+
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смішної людини",
+//     author: "Федір Достоєвський",
+//     rating: 7.75,
+//   },
+// ];
+// const bookNames=[];
+// for(const book of books){
+//   console.log(book);
+//   bookNames.push(book.title);
+//   console.log(book.title);
+// }
+// console.log(bookNames)
+
+
+// ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТУ
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+// ];
+
+// for (const book of books) {
+//   console.log(book);
+// //   console.log(book.title);
+// //   console.log(book.author);
+// //   console.log(book.rating);
+// }
+
+// // Для того, щоб скоротити кількість повторень, можна деструктуризувати властивості об'єкта у локальні змінні в тілі циклу.
+
+// for (const book of books) {
+//   const { title, author, rating } = book;
+
+//   console.log(title);
+//   // console.log(author);
+//   // console.log(rating);
+// }
+
+// Якщо в об'єкті небагато властивостей, можна виконати деструктуризацію безпосередньо у місці оголошення змінної book.
+
+// for (const { title, author, rating } of books) {
+//   console.log(title);
+//   console.log(author);
+//   console.log(rating);
+// }
+
+// КОЛБЕКИ
+
+
+// function makePizza() {
+//   return "Your pizza is being prepared, please wait.";
+// }
+// // Change code below this line
+
+// const result =  makePizza();
+// const pointer = makePizza;
+
+
+// console.log(result);
+// console.log(pointer);
+
+
+// const pizzas = ["Ultracheese", "Smoked", "Four meats"];
+//  const pizzaInc= !pizzas.includes("Smoked")
+// console.log(pizzaInc)
+
+
+// МЕТОД FOREACH
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+//    orderedItems.forEach(function(item){
+//     totalPrice += item;
+//    });
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]))
+// // повертає 1116
+
+
+
+// МЕТОД FOREACH І СТРІЛОЧНІ ФУНКЦІЇ
+
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+// // Change code above this line
+
+
+// console.log(calculateTotalPrice([164, 48, 291])) 
+// // повертає 503
+
+
+
+// ЧИСТІ ФУНКЦІЇ(ПОВЕРНЕННЯ НОВОГО МАСИВУ ЗА УМОВОЮ)
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray =[];
+//  numbers.forEach((number) => {
+  
+//   if(number %2===0){
+//     number=number+value;
+//   }
+//    newArray.push(number);
+//  })
+//  return newArray;
+ 
+// }
+ 
+//   // 
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   // //   if (numbers[i] % 2 === 0) {
+//   // //     numbers[i] = numbers[i] + value;
+//   // //     newArray.push(numbers[i])
+//   // //   }
+//   // // }
+
+
+
+
+// МЕТОД MAP()
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10))
+// //  повертає новий масив [1, 12, 3, 14, 5]
+
+
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map(planet=>planet.length);
+
+
+// console.log(planetsLengths)
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const titles = books.map((book)=>book.title);
+
+// console.log(titles)
+
+
+// МЕТОД FLATMAP
+
+
 
