@@ -1824,31 +1824,68 @@ const users =[
 //   return array
 // }
 
-
-// function sumArray(array){
-// if(array === null || array === []) {
-//   return 0;
+// function sumArray(array) {
+//   if (array == null) {
+//     return 0;
+//   } else if (array.length < 2) {
+//     return 0;
+//   } else {
+//     array = array.sort(function(a,b) {return a - b;});
+//     var total = 0;
+//     for (var i = 1; i < array.length - 1; i++) {
+//       total += array[i];
+//     }
+//     return total;
+//   }
 // }
-// else {
-//   let=total=0;
-//   let newArray= array.sort(function(a,b){return a-b}).slice(1,array.length-1);
-//   for(let arr of newArray){
-//     total+=arr
-//   };
-// return total;
+// // (Альтернативний)sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+
+
+// console.log(sumArray(null))                             
+// console.log(sumArray([ ]))                              
+// console.log(sumArray([ 3 ]))                            
+// console.log(sumArray([ 3, 5 ]))                         
+// console.log(sumArray([ 6, 2, 1, 8, 10 ]))               
+// console.log(sumArray([ 0, 1, 6, 10, 10 ]))              
+// console.log(sumArray([ -6, -20, -1, -10, -12 ]))         
+// console.log(sumArray([ -6, 20, -1, 10, -12 ]))          
+
+// function sum (numbers) {
+//   "use strict";
+//   let total=0;
+// for(const number of numbers){
+//   total+=number*10
 // }
-// }
+//   return total/10
+  
+// };
+
+// // (Альтернатива )function sum(numbers) {
+// //   return numbers.reduce((a, b) => a + b, 0);
+// // }
+// console.log(sum([]));
+// console.log(sum([1, 5.2, 4, 0, -1]));
+
+const array = [1,2,3,4,5,6,7,8,9,10,-1,-2,-3,0]
+
+function countPositivesSumNegatives(input) {
+  // your code here
+  let positiveNumber=[];
+  let countPosNum=positiveNumber.length
+  let negativeNumbers=0;
+  let result=[];
+  for(const number of input){
+    if(number>0){
+      positiveNumber.push(number)
+      console.log(positiveNumber)
+    }
+    else if(number<0){
+      negativeNumbers+=number
+    }
+    
+  }
+  return result = [countPosNum,negativeNumbers]
+}
 
 
-
-// console.log(sumArray([ 6, 2, 1, 8, 10 ]));
-// console.log(sumArray([ 0, 1, 6, 10, 10 ]));
-// console.log(sumArray([ 0]));
-// console.log(sumArray( null));
-// console.log(sumArray([ 3 ]));
-// console.log(sumArray([ 3, 5 ]));
-// console.log(sumArray([ 6, 2, 1, 8, 10 ]) );
-// console.log(sumArray([ 0, 1, 6, 10, 10 ]));
-// console.log(sumArray([ -6, -20, -1, -10, -12 ]));
-// console.log(sumArray([ -6, 20, -1, 10, -12 ]) );
-
+console.log( countPositivesSumNegatives(array))
