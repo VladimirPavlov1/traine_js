@@ -1591,301 +1591,302 @@
 //    console.log(getSortedFriends)
 
 
-const users =[
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male"
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female"
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male"
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female"
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
-    isActive: true,
-    balance: 3951,
-    gender: "male"
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
-    isActive: false,
-    balance: 1498,
-    gender: "male"
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female"
-  }
-]
-
-// Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
-
-// const getTotalBalanceByGender= 
-//   [...users].filter(user=>user.gender==='female').flatMap(user=>user.balance).reduce((total,number)=>{
-//     return total+number;},0);
-  
-
-//   console.log(getTotalBalanceByGender)
-//   // const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
-//   //   return previousValue + number;
-//   // }, 0);
-
-
-// THIS!!!!
-
-
-// ПРОТОТИПИ
-
-// const parent = {
-//   name: "Stacey",
-//   surname: "Moore",
-//   age: 54,
-//   heritage: "Irish",
-// };
-// // Change code below this line
-
-// const child = Object.create(parent);
-
-// // Change code above this line
-// child.name = "Jason";
-// child.age = 27;
-// console.log(child.heritage)
-
-
-
-// class Storage{
-//   constructor(arr){
-//     this.items = arr;
-//   }
-//   getItems(items){
-//     return this.items;
-//   }
-//   addItem(newItem){
-//     this.items.push(newItem);
-//   }
-//   removeItem(itemToRemove){
-//      if(this.items.includes(itemToRemove)){
-//        const indx=this.items.indexOf(itemToRemove);
-//        this.items.splice(indx,1);
-//      }
-//   }
-// };
-
-// Напиши клас Storage, який буде створювати об'єкти для управління складом товарів. Клас очікує тільки один аргумент - початковий масив товарів, який записується у властивість items об'єкта, що створюється.
-
-// Оголоси наступні методи класу:
-
-// getItems() - повертає масив поточних товарів у властивості items об'єкта, який викликає цей метод.
-// addItem(newItem) - приймає новий товар newItem і додає його в масив товарів у властивості items об'єкта, який викликає цей метод.
-// removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву товарів у властивості items об'єкта, який викликає цей метод.
-// Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
-// Change code above this line
-// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-// storage.addItem("Droid");
-// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-// storage.removeItem("Prolonger");
-// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-
-
-// class Car {
-//   // Change code below this line
-//   #price;
-// static= {MAX_PRICE:50000}
-
-//   constructor(price){
-//     this.#price = price;
-//   }
-  
-
-//   get price() {
-//     return this.#price;
-//   }
-
-//   set price(newPrice) {
-//     if(this.#price<=Car.MAX_PRICE)
-//     this.#price = newPrice;
-//   }
-//   // Change code above this line
-// }
-
-// const audi = new Car({ price: 35000 });
-// console.log(audi.price); // 35000
-
-// audi.price = 49000;
-// console.log(audi.price); // 49000
-
-// audi.price = 51000;
-// console.log(audi.price); // 49000
-
-// const SuperCar= new Car( 51000)
-// console.log(SuperCar)
-
-
-// CODEWARS ЗАДАЧІ
-// СУММА ВСІХ ПОЗИТИВНИХ ЧИСЕЛ
-// function positiveSum(arr) {
-//   let sum=0;
-//   for(const number of arr){
-//     console.log(number)
-//     if(number>0){
-//       sum+=number
+// const users =[
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female"
 //     }
-//   }
-//   return sum
-//  }
-// console.log(positiveSum([1,2,3,4,5]))
-
-
-
-// Підсумуйте всі числа даного масиву ( cq. list ), крім найвищого та найнижчого елементів (за значенням, а не за індексом!).
-// Найвищий або найнижчий елемент, відповідно, є одним елементом на кожному краю, навіть якщо їх більше одного з однаковим значенням.
-
-
-
-// function sortNumsAsc(arr) {
-//   if(arr === null || arr === []) {
-//       return [];
-//   }
-//   else {
-//   return arr.sort(function(a,b){return a-b});
-//   //return newarr;
-//   }
-// }
-
-// function sumArray(array){
-//   if(array===null||array===[]){return 0;}
-//    const newArray=array.sort((a,b)=>(a-b))
-   
-//    const slArray=newArray.slice(1,array.length-1);
-   
-//   let total=0;
-//   for(const number of slArray){
- 
-//  total+=number;
- 
-//   }
-//   return total;
- 
-//  }
-
-// function sumArray(array){
+//   ]
   
-//   for(let k=0;k<array.length;k+=1){
-//     console.log(array)
-//     for(let i=0;i<array.length;i+=1){
-//       if(array[i]>array[i+1]){
-//         [array[i],array[i+1]=array[i+1],array[i]];
-//         console.log(array)
-//       }
-//     }
-   
-//   }
+  // Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
   
-//   return array
-// }
-
-// function sumArray(array) {
-//   if (array == null) {
-//     return 0;
-//   } else if (array.length < 2) {
-//     return 0;
-//   } else {
-//     array = array.sort(function(a,b) {return a - b;});
-//     var total = 0;
-//     for (var i = 1; i < array.length - 1; i++) {
-//       total += array[i];
-//     }
-//     return total;
-//   }
-// }
-// // (Альтернативний)sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
-
-
-// console.log(sumArray(null))                             
-// console.log(sumArray([ ]))                              
-// console.log(sumArray([ 3 ]))                            
-// console.log(sumArray([ 3, 5 ]))                         
-// console.log(sumArray([ 6, 2, 1, 8, 10 ]))               
-// console.log(sumArray([ 0, 1, 6, 10, 10 ]))              
-// console.log(sumArray([ -6, -20, -1, -10, -12 ]))         
-// console.log(sumArray([ -6, 20, -1, 10, -12 ]))          
-
-// function sum (numbers) {
-//   "use strict";
-//   let total=0;
-// for(const number of numbers){
-//   total+=number*10
-// }
-//   return total/10
-  
-// };
-
-// // (Альтернатива )function sum(numbers) {
-// //   return numbers.reduce((a, b) => a + b, 0);
-// // }
-// console.log(sum([]));
-// console.log(sum([1, 5.2, 4, 0, -1]));
-
-const array = [1,2,3,4,5,6,7,8,9,10,-1,-2,-3,0]
-
-function countPositivesSumNegatives(input) {
-  // your code here
-  let positiveNumber=[];
-  let countPosNum=positiveNumber.length
-  let negativeNumbers=0;
-  let result=[];
-  for(const number of input){
-    if(number>0){
-      positiveNumber.push(number)
-      console.log(positiveNumber)
-    }
-    else if(number<0){
-      negativeNumbers+=number
-    }
+  // const getTotalBalanceByGender= 
+  //   [...users].filter(user=>user.gender==='female').flatMap(user=>user.balance).reduce((total,number)=>{
+  //     return total+number;},0);
     
-  }
-  return result = [countPosNum,negativeNumbers]
-}
+  
+  //   console.log(getTotalBalanceByGender)
+  //   // const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+  //   //   return previousValue + number;
+  //   // }, 0);
+  
+  
+  // THIS!!!!
+  
+  
+  // ПРОТОТИПИ
+  
+  // const parent = {
+  //   name: "Stacey",
+  //   surname: "Moore",
+  //   age: 54,
+  //   heritage: "Irish",
+  // };
+  // // Change code below this line
+  
+  // const child = Object.create(parent);
+  
+  // // Change code above this line
+  // child.name = "Jason";
+  // child.age = 27;
+  // console.log(child.heritage)
+  
+  
+  
+  // class Storage{
+  //   constructor(arr){
+  //     this.items = arr;
+  //   }
+  //   getItems(items){
+  //     return this.items;
+  //   }
+  //   addItem(newItem){
+  //     this.items.push(newItem);
+  //   }
+  //   removeItem(itemToRemove){
+  //      if(this.items.includes(itemToRemove)){
+  //        const indx=this.items.indexOf(itemToRemove);
+  //        this.items.splice(indx,1);
+  //      }
+  //   }
+  // };
+  
+  // Напиши клас Storage, який буде створювати об'єкти для управління складом товарів. Клас очікує тільки один аргумент - початковий масив товарів, який записується у властивість items об'єкта, що створюється.
+  
+  // Оголоси наступні методи класу:
+  
+  // getItems() - повертає масив поточних товарів у властивості items об'єкта, який викликає цей метод.
+  // addItem(newItem) - приймає новий товар newItem і додає його в масив товарів у властивості items об'єкта, який викликає цей метод.
+  // removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву товарів у властивості items об'єкта, який викликає цей метод.
+  // Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
+  // Change code above this line
+  // const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+  // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+  // storage.addItem("Droid");
+  // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+  // storage.removeItem("Prolonger");
+  // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+  
+  
+  // class Car {
+  //   // Change code below this line
+  //   #price;
+  // static= {MAX_PRICE:50000}
+  
+  //   constructor(price){
+  //     this.#price = price;
+  //   }
+    
+  
+  //   get price() {
+  //     return this.#price;
+  //   }
+  
+  //   set price(newPrice) {
+  //     if(this.#price<=Car.MAX_PRICE)
+  //     this.#price = newPrice;
+  //   }
+  //   // Change code above this line
+  // }
+  
+  // const audi = new Car({ price: 35000 });
+  // console.log(audi.price); // 35000
+  
+  // audi.price = 49000;
+  // console.log(audi.price); // 49000
+  
+  // audi.price = 51000;
+  // console.log(audi.price); // 49000
+  
+  // const SuperCar= new Car( 51000)
+  // console.log(SuperCar)
+  
+  
+  // CODEWARS ЗАДАЧІ
+  // СУММА ВСІХ ПОЗИТИВНИХ ЧИСЕЛ
+  // function positiveSum(arr) {
+  //   let sum=0;
+  //   for(const number of arr){
+  //     console.log(number)
+  //     if(number>0){
+  //       sum+=number
+  //     }
+  //   }
+  //   return sum
+  //  }
+  // console.log(positiveSum([1,2,3,4,5]))
+  
+  
+  
+  // Підсумуйте всі числа даного масиву ( cq. list ), крім найвищого та найнижчого елементів (за значенням, а не за індексом!).
+  // Найвищий або найнижчий елемент, відповідно, є одним елементом на кожному краю, навіть якщо їх більше одного з однаковим значенням.
+  
+  
+  
+  // function sortNumsAsc(arr) {
+  //   if(arr === null || arr === []) {
+  //       return [];
+  //   }
+  //   else {
+  //   return arr.sort(function(a,b){return a-b});
+  //   //return newarr;
+  //   }
+  // }
+  
+  // function sumArray(array){
+  //   if(array===null||array===[]){return 0;}
+  //    const newArray=array.sort((a,b)=>(a-b))
+     
+  //    const slArray=newArray.slice(1,array.length-1);
+     
+  //   let total=0;
+  //   for(const number of slArray){
+   
+  //  total+=number;
+   
+  //   }
+  //   return total;
+   
+  //  }
+  
+  // function sumArray(array){
+    
+  //   for(let k=0;k<array.length;k+=1){
+  //     console.log(array)
+  //     for(let i=0;i<array.length;i+=1){
+  //       if(array[i]>array[i+1]){
+  //         [array[i],array[i+1]=array[i+1],array[i]];
+  //         console.log(array)
+  //       }
+  //     }
+     
+  //   }
+    
+  //   return array
+  // }
+  
+  // function sumArray(array) {
+  //   if (array == null) {
+  //     return 0;
+  //   } else if (array.length < 2) {
+  //     return 0;
+  //   } else {
+  //     array = array.sort(function(a,b) {return a - b;});
+  //     var total = 0;
+  //     for (var i = 1; i < array.length - 1; i++) {
+  //       total += array[i];
+  //     }
+  //     return total;
+  //   }
+  // }
+  // // (Альтернативний)sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+  
+  
+  // console.log(sumArray(null))                             
+  // console.log(sumArray([ ]))                              
+  // console.log(sumArray([ 3 ]))                            
+  // console.log(sumArray([ 3, 5 ]))                         
+  // console.log(sumArray([ 6, 2, 1, 8, 10 ]))               
+  // console.log(sumArray([ 0, 1, 6, 10, 10 ]))              
+  // console.log(sumArray([ -6, -20, -1, -10, -12 ]))         
+  // console.log(sumArray([ -6, 20, -1, 10, -12 ]))          
+  
+  // function sum (numbers) {
+  //   "use strict";
+  //   let total=0;
+  // for(const number of numbers){
+  //   total+=number*10
+  // }
+  //   return total/10
+    
+  // };
+  
+  // // (Альтернатива )function sum(numbers) {
+  // //   return numbers.reduce((a, b) => a + b, 0);
+  // // }
+  // console.log(sum([]));
+  // console.log(sum([1, 5.2, 4, 0, -1]));
+  
+  // const array = [1,2,3,4,5,6,7,8,9,10,-1,-2,-3,0]
+  
+  // function countPositivesSumNegatives(input) {
+  //   // your code here
+  //   let positiveNumber=[];
+  //   let countPosNum=positiveNumber.length
+  //   let negativeNumbers=0;
+  //   let result=[];
+  //   for(const number of input){
+  //     if(number>0){
+  //       positiveNumber.push(number)
+  //       console.log(positiveNumber)
+  //     }
+  //     else if(number<0){
+  //       negativeNumbers+=number
+  //     }
+      
+  //   }
+  //   return result = [countPosNum,negativeNumbers]
+  // }
+  
+  
+  // console.log( countPositivesSumNegatives(array))
 
-
-console.log( countPositivesSumNegatives(array))
